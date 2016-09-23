@@ -8,14 +8,12 @@ import { TodoComponent } from "./todo.component";
 import { TaskComponent } from "./task.component";
 
 import { TodoService } from "./todo.service";
-import { routing } from "./app.routes";
 
 @NgModule({
     imports: [
         BrowserModule,
         HttpModule,
-        FormsModule,
-        routing
+        FormsModule
     ],
     declarations: [AppComponent, TodoComponent, TaskComponent],
     providers: [TodoService],
