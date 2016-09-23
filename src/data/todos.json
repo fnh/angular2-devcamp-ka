@@ -1,0 +1,6 @@
+[ 
+    { "task": "Prepare Angular 2 demo", "done": false }, 
+    { "task": "Clean at home", "done": false },
+    { "task": "mvn clean install", "done": true },
+    { "task": "create http backend service call", "done": true }
+]

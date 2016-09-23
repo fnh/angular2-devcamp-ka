@@ -6,13 +6,15 @@ import { AppComponent } from "./app.component";
 import { TodoComponent } from "./todo.component";
 import { TaskComponent } from "./task.component";
 
+import { TodoService } from "./todo.service";
+
 @NgModule({
     imports: [
         BrowserModule,
         HttpModule
     ],
     declarations: [AppComponent, TodoComponent, TaskComponent],
-    providers: [],
+    providers: [TodoService],
     bootstrap: [AppComponent],
 })
 export class AppModule { }
