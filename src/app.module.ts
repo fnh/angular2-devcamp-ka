@@ -4,13 +4,14 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from "./app.component";
 import { TodoComponent } from "./todo.component";
+import { TaskComponent } from "./task.component";
 
 @NgModule({
     imports: [
         BrowserModule,
         HttpModule
     ],
-    declarations: [AppComponent, TodoComponent],
+    declarations: [AppComponent, TodoComponent, TaskComponent],
     providers: [],
     bootstrap: [AppComponent],
 })
