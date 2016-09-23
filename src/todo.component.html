@@ -1,12 +1,3 @@
 <task-component *ngFor="let entry of todos"
                 [todo]="entry"
                 (click)="toggle(entry)"></task-component>
-
-<hr>
-<div>
-<input type="text" [(ngModel)]="nextTask">
-<button (click)="addTodo()">Add new todo</button>
-</div>
-<div>
-{{nextTask}}
-</div>

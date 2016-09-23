@@ -8,8 +8,6 @@ import { TodoService } from "./todo.service";
 })
 export class TodoComponent {
     private todos;
-    
-    private nextTask = "Enter new Task";
 
     constructor(private todoService: TodoService) {}
 
@@ -20,16 +18,6 @@ export class TodoComponent {
 
     private toggle(entry) {
         entry.done = !entry.done;
-    }
-
-    private addTodo() {
-        let todo = {
-            task: this.nextTask,
-            done: false
-        };
-
-        this.todos.push(todo);
-        this.nextTask = "Enter new Task";
     }
 
 }
