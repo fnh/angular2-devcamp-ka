@@ -1,1 +1,3 @@
-<task-component *ngFor="let entry of todos" [todo]="entry"></task-component>
+<ul>
+    <li *ngFor="let todo of todos">{{todo | json}}
+</ul>
