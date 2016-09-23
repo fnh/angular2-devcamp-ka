@@ -6,9 +6,11 @@ import { FormsModule } from "@angular/forms"
 import { AppComponent } from "./app.component";
 import { TodoComponent } from "./todo.component";
 import { TaskComponent } from "./task.component";
+import { FinishComponent }      from './finish.component';
 
 import { TodoService } from "./todo.service";
 import { routing } from "./app.routes";
+
 
 @NgModule({
     imports: [
@@ -17,7 +19,7 @@ import { routing } from "./app.routes";
         FormsModule,
         routing
     ],
-    declarations: [AppComponent, TodoComponent, TaskComponent],
+    declarations: [AppComponent, TodoComponent, TaskComponent, FinishComponent],
     providers: [TodoService],
     bootstrap: [AppComponent],
 })
