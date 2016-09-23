@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TodoService } from "./todo.service";
 
 @Component({
     moduleId: module.id,
@@ -8,11 +9,15 @@ import { Component, OnInit } from '@angular/core';
 export class TodoComponent {
     private todos;
 
-    ngOnInit() {
-        this.todos = [ { task: "Prepare Angular 2 demo", done: false }, 
-                       { task: "Clean at home", done: false },
-                       { task: "mvn clean install", done: true } ];
+    constructor(private todoService: TodoService) {}
 
+    ngOnInit() {
+        const responseHandler = (response: any) => { this.todos = JSON.parse(response._body); }
+        this.todoService.getTodos().subscribe(responseHandler);
+    }
+
+    private toggle(entry) {
+        entry.done = !entry.done;
     }
 
 }
